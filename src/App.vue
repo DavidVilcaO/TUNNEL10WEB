@@ -18,6 +18,14 @@ export default {
 };
 </script>
 <style lang="stylus">
+@font-face {
+  font-family: Avenir;
+    src: url('./assets/fonts/AvenirLTStd-Roman.otf'),
+         url('./assets/fonts/AvenirLTStd-Medium.otf'), 
+         url('./assets/fonts/AvenirLTStd-Book.otf'), 
+         url('./assets/fonts/AvenirLTStd-Black.otf'), 
+
+}
 
 body
   margin 0px
