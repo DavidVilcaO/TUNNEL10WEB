@@ -44,8 +44,8 @@
       cursor pointer
       color white
       list-style none
-      // font-family Avenir
-      font-family: 'Roboto', sans-serif;
+      font-family Avenir
+      // font-family: 'Roboto', sans-serif;
       text-decoration none
       font-weight: 300;
 @media screen and (max-width: 600px) {

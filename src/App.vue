@@ -23,8 +23,7 @@ export default {
     src: url('./assets/fonts/AvenirLTStd-Roman.otf'),
          url('./assets/fonts/AvenirLTStd-Medium.otf'), 
          url('./assets/fonts/AvenirLTStd-Book.otf'), 
-         url('./assets/fonts/AvenirLTStd-Black.otf'), 
-
+         url('./assets/fonts/AvenirLTStd-Black.otf');
 }
 
 body
@@ -33,8 +32,8 @@ body
 
 #app
   height 100vh
-  // font-family 'Avenir', Helvetica, Arial, sans-serif
-  font-family: 'Roboto', sans-serif;
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  // font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
