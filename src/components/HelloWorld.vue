@@ -4,7 +4,7 @@
     <p style="max-width: 700px; margin-left: auto; margin-right: auto;">
       Download large files with the easy-to-use BitTorrent client. Enjoy fast speeds, a simple interface, powerful options and more. Get started now with free, unlimited downloading.
     </p>
-    <a class="button" v-if="os == 'Mac OS'">
+    <a class="button" v-if="os == 'Mac OS'" @click="download()">
       <i class="fab fa-apple"></i>
       <span>
         Download for macOS
