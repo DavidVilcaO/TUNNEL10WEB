@@ -5,11 +5,15 @@
           <img src="../assets/logo-tunnel10.png" alt="">
         </div>
         </a>
-        <div class="items-menu">
+        <div class="items-menu"><!-- 
           <a href="privacy.html">Privacy</a>
           <a href="security.html">Securrity</a>
           <a href="availability.html">Availability</a>
-          <a href="compliance.html">Compliance</a>
+          <a href="compliance.html">Compliance</a> -->
+          <a href="/#">Privacy</a>
+          <a href="/#">Securrity</a>
+          <a href="/#">Availability</a>
+          <a href="/#">Compliance</a>
         </div>
       </div>
 </template>
@@ -40,7 +44,8 @@
       cursor pointer
       color white
       list-style none
-      font-family Avenir
+      // font-family Avenir
+      font-family: 'Roboto', sans-serif;
       text-decoration none
       font-weight: 300;
 @media screen and (max-width: 600px) {
