@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p style="max-width: 700px; margin auto;">
+    <p style="max-width: 700px; margin: auto;">
       Download large files with the easy-to-use BitTorrent client. Enjoy fast speeds, a simple interface, powerful options and more. Get started now with free, unlimited downloading.
     </p>
     <a class="button" v-if="os == 'Mac OS'">
