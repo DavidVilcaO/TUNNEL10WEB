@@ -89,6 +89,19 @@ export default {
         // Cleanup the DOM
         document.body.removeChild(link);
       }
+      if(this.os == 'Mac OS') {
+        let uri = './mac/Tunnel10-0.1.0.dmg'
+        let thefilename = 'Tunnel10-0.1.0.dmg'
+        
+        var link = document.createElement("a");
+        link.download = thefilename;
+        // Construct the uri
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        // Cleanup the DOM
+        document.body.removeChild(link);
+      }
     }
   },
 };
