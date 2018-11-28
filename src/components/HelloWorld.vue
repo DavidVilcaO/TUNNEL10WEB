@@ -2,22 +2,38 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Download large files with the easy-to-use BitTorrent client. Enjoy fast speeds, a simple interface,<br>
-powerful options and more. Get started now with free, unlimited downloading.
-
+      Download large files with the easy-to-use BitTorrent client. Enjoy fast speeds, a simple interface,<br> powerful options and more. Get started now with free, unlimited downloading.
     </p>
-    <a class="button">
-        <i class="fab fa-apple"></i>
-        <span>
-          Download for macOS
-        </span>
+    <a class="button" v-if="os == 'Mac OS'">
+      <i class="fab fa-apple"></i>
+      <span>
+        Download for macOS
+      </span>
     </a>
-   <!-- <a class="button">
+    <a class="button" v-if="os == 'Windows'">
         <i class="fab fa-windows"></i>
         <span>
-          Download for macOS
+          Download for Windows
         </span>
-    </a>-->
+    </a>
+    <a class="button" v-if="os == 'Linux'">
+      <i class="fab fa-linux"></i>
+        <span>
+          Download for Linux
+        </span>
+    </a>
+    <a class="button" v-if="os == 'iOS'">
+      <i class="fab fa-apple"></i>
+        <span>
+          Download for iOS
+        </span>
+    </a>
+    <a class="button" v-if="os == 'Android'">
+      <i class="fab fa-android"></i>
+        <span>
+          Download for Android
+        </span>
+    </a>
   </div>
 </template>
 
@@ -26,6 +42,38 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+  },
+  data: () => {
+    return {
+      os: ''
+    }
+  },
+  created() {
+    var userAgent = window.navigator.userAgent,
+        platform = window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
+
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac OS';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'Android';
+    } else if (!os && /Linux/.test(platform)) {
+      os = 'Linux';
+    }
+
+    console.log('os: ', os)
+    this.os = os
+  },
+  computed: {
+  },
+  methods: {
   },
 };
 </script>
@@ -38,7 +86,7 @@ export default {
   text-align: center;
   color: white;
   margin-top: 80px;
-  font-family: Avenir;
+  // font-family: Avenir;
   background: linear-gradient(#4CB0F4, #8526FF);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -56,7 +104,7 @@ p
     font-weight: 300;
     margin-top: 60px;
     color: white;
-    font-family: Avenir;
+    // font-family: Avenir;
 
 .button 
     width: 300px;
@@ -70,7 +118,7 @@ p
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     span
       font-size: 16px;
-      font-family: avenir;
+      // font-family: avenir;
       line-height: 45px;
       font-weight: 500;
       background: linear-gradient(#4CB0F4, #8526FF);
