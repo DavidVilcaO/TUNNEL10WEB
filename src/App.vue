@@ -31,7 +31,7 @@ body
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  padding 10px
+  padding 0 10px
   // background-color #0E0E0E
   background-image linear-gradient(
       rgba(0, 0, 0, 1),

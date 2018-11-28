@@ -1,0 +1,17 @@
+{
+  "name": "tunnel10-site",
+  "type": "static",
+  "static": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "alias": "tunnel10-site",
+  "files": [
+    "dist"
+  ]
+}
