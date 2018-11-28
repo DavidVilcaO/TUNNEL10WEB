@@ -10,7 +10,7 @@
         Download for macOS
       </span>
     </a>
-    <a class="button" v-if="os == 'Windows'">
+    <a class="button" v-if="os == 'Windows'" @click="download()">
         <i class="fab fa-windows"></i>
         <span>
           Download for Windows
@@ -74,6 +74,22 @@ export default {
   computed: {
   },
   methods: {
+    download () {
+      console.log('download!')
+      if(this.os == 'Windows') {
+        let uri = './windows/Tunnel10 Setup 0.1.0.exe'
+        let thefilename = 'Tunnel10 Setup 0.1.0.exe'
+        
+        var link = document.createElement("a");
+        link.download = thefilename;
+        // Construct the uri
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        // Cleanup the DOM
+        document.body.removeChild(link);
+      }
+    }
   },
 };
 </script>
