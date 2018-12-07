@@ -10,7 +10,6 @@
       }
     ]
   },
-  "alias": "tunnel10-site",
   "files": [
     "dist"
   ]
