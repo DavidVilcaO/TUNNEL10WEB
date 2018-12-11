@@ -77,8 +77,8 @@ export default {
     download () {
       console.log('download!')
       if(this.os == 'Windows') {
-        let uri = './windows/Tunnel10 Setup 0.1.0.exe'
-        let thefilename = 'Tunnel10 Setup 0.1.0.exe'
+        let uri = './windows/Tunnel10 Setup 0.2.0.exe'
+        let thefilename = 'Tunnel10 Setup 0.2.0.exe'
         
         var link = document.createElement("a");
         link.download = thefilename;
