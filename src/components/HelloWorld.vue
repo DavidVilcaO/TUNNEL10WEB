@@ -90,8 +90,8 @@ export default {
         document.body.removeChild(link);
       }
       if(this.os == 'Mac OS') {
-        let uri = './mac/Tunnel10-0.1.0.dmg'
-        let thefilename = 'Tunnel10-0.1.0.dmg'
+        let uri = './mac/Tunnel10-0.2.0.dmg'
+        let thefilename = 'Tunnel10-0.2.0.dmg'
         
         var link = document.createElement("a");
         link.download = thefilename;
